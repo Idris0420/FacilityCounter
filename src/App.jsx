@@ -51,19 +51,25 @@ function App() {
   };
 
   const copyTableToClipboard = () => {
-    let textToCopy = `Results: ${commentCount}\n\n`;
-    textToCopy += "Facility\tCount\n";
-
-    hospitals.forEach(({ name }) => {
-      textToCopy += `${name}\t${facilityCounts[name] || 0}\n`;
-    });
-
-    navigator.clipboard.writeText(textToCopy).then(() => {
-      alert("Results copied to clipboard!");
-    }).catch(err => {
-      console.error("Failed to copy text: ", err);
-    });
+    const table = document.getElementById("results-table");
+  
+    if (!table) {
+      alert("No table found to copy!");
+      return;
+    }
+  
+    // Convert table to HTML string
+    const tableHtml = table.outerHTML;
+  
+    // Wrap it in a proper clipboard format for HTML
+    const blob = new Blob([tableHtml], { type: "text/html" });
+    const clipboardItem = new ClipboardItem({ "text/html": blob });
+  
+    navigator.clipboard.write([clipboardItem])
+      .then(() => alert("Table copied to clipboard! Paste it in MS Teams."))
+      .catch(err => console.error("Failed to copy table: ", err));
   };
+  
 
   return (
     <div className="min-w-screen min-h-screen p-6 flex justify-center items-start">
