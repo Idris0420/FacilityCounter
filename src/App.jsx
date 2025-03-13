@@ -9,17 +9,26 @@ function App() {
   const [scaleAnimation, setScaleAnimation] = useState(false);
 
   const hospitals = [
-    { keyword: "west hosp", name: "IUH West Hospital" },
+    { keyword: "west hosp", name: "IUH West Hosp" },
     { keyword: "methodist hosp", name: "IUH Methodist Hosp" },
-    { keyword: "univ hosp", name: "IUH Univ Hospital" },
-    { keyword: "arnett hosp", name: "IUH Arnett Hospital" },
+    { keyword: "univ hosp", name: "IUH Univ Hosp" },
+    { keyword: "arnett hosp", name: "IUH Arnett Hosp" },
     { keyword: "north hosp", name: "IUH North Hosp" },
     { keyword: "wcr rad westside", name: "WCR Rad Westside" },
     { keyword: "white memorial hosp", name: "IUH White Memorial Hosp" },
     { keyword: "riley hosp", name: "Riley Hosp at IUH" },
     { keyword: "mh external sites", name: "IUH MH External Sites" },
-    { keyword: "saxony hosp", name: "IUH Saxony Hospital" }
-  ];
+    { keyword: "saxony hosp", name: "IUH Saxony Hosp" },
+    { keyword: "bloomington hosp", name: "IUH Bloomington Hosp" },
+    { keyword: "bedford hosp", name: "IUH Bedford Hosp" },
+    { keyword: "ball memorial hosp", name: "IUH Ball Memorial Hosp" },
+    { keyword: "frankfort hosp", name: "IUH Frankfort Hosp" },
+    { keyword: "avon hosp", name: "IUH Avon Hosp" },
+    { keyword: "tipton hosp", name: "IUH Tipton Hosp" },
+    { keyword: "morgan hosp", name: "IUH Morgan Hosp" },
+    { keyword: "paoli hosp", name: "IUH Paoli Hosp" }
+];
+
 
   const countFacilities = () => {
     const commentEntries = comments.split(/={2,}/).map(c => c.trim()).filter(c => c);
