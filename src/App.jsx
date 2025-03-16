@@ -20,13 +20,13 @@ function App() {
     { keyword: ["wcr rad westside"], name: "WCR Rad Westside" },
     { keyword: ["white memorial hosp"], name: "IUH White Memorial Hosp" },
     { keyword: ["riley hosp"], name: "Riley Hosp at IUH" },
-    { keyword: ["mh external sites", "iuh mh external"], name: "IUH MH External Sites" },
-    { keyword: ["saxony hosp, iuh saxony"], name: "IUH Saxony Hosp" },
-    { keyword: ["bloomington hosp, iuh bloomington"], name: "IUH Bloomington Hosp" },
+    { keyword: ["mh external sites", "iuh mh ext"], name: "IUH MH External Sites" },
+    { keyword: ["saxony hosp", "iuh saxony"], name: "IUH Saxony Hosp" },
+    { keyword: ["bloomington hosp", "iuh bloomington"], name: "IUH Bloomington Hosp" },
     { keyword: ["bedford hosp", "iuh bedford"], name: "IUH Bedford Hosp" },
     { keyword: ["ball mem", "iuh ball"], name: "IUH Ball Memorial Hosp" },
-    { keyword: ["avon hosp, iuh avon"], name: "IUH Avon Hosp" },
-    { keyword: ["tipton hosp, iuh tipton"], name: "IUH Tipton Hosp" },
+    { keyword: ["avon hosp","iuh avon"], name: "IUH Avon Hosp" },
+    { keyword: ["tipton hosp", "iuh tipton"], name: "IUH Tipton Hosp" },
     { keyword: ["morgan hosp", "iuh morgan"], name: "IUH Morgan Hosp" },
     { keyword: ["paoli hosp", "iuh paoli"], name: "IUH Paoli Hosp" },
     { keyword: ["iuh blm", "blm rahc"], name: "IUH BLM RAHC" },
@@ -97,7 +97,7 @@ function App() {
 
   return (
     <div className="min-w-screen min-h-screen p-6 pt-0 flex justify-center items-start">
-      <div className="fixed bg-[#279AF1] w-screen flex items-center justify-center h-[70px]">
+      <div className="fixed bg-[#279AF1] w-screen flex items-center justify-center h-[70px] z-[999]">
         <h1 className="text-4xl font-bold text-center">Facility Counter</h1>
       </div>
       <div className="flex w-full max-w-6xl mt-[110px]">
@@ -111,14 +111,14 @@ function App() {
             ></textarea>
             <div className="w-full flex justify-around mt-4">
               <button
-                className="bg-[#EA526F] h-[50px] px-[20px] rounded hover:scale-110 hover:bg-[#E385FD] transition-all duration-300"
+                className="box bg-[#EA526F] h-[50px] px-[20px] rounded hover:scale-110 hover:bg-[#E385FD] transition-all duration-300"
                 onClick={countFacilities}
               >
                 Count Facility
               </button>
               <div className="flex flex-row items-center gap-3">
                 <h1 className="text-xl">Separator:</h1>
-                <select name="" id="" onChange={e => changeSeparator(e)} className="h-[40px] w-[90px] rounded border border-black">
+                <select name="" id="" onChange={e => changeSeparator(e)} className="h-[40px] w-[90px] rounded border border-black box">
                   <option value="==">==</option>
                   <option value="--">--</option>
                 </select>
