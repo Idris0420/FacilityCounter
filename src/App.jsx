@@ -30,7 +30,9 @@ function App() {
     { keyword: ["morgan hosp", "iuh morgan"], name: "IUH Morgan Hosp" },
     { keyword: ["paoli hosp", "iuh paoli"], name: "IUH Paoli Hosp" },
     { keyword: ["iuh blm", "blm rahc"], name: "IUH BLM RAHC" },
-    { keyword: ["imr cardio", "cardio east"], name: "IMR Cardio East"}
+    { keyword: ["imr cardio", "cardio east"], name: "IMR Cardio East"},
+    { keyword: ["multi-d south", "imr multi"], name: "IMR Multi-D South"},
+    { keyword: ["BLK Radiology", "Radiology Blackford"], name: "BLK Radiology Blackford"},
   ];
 
   const countFacilities = () => {
